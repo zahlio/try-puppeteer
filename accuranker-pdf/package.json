@@ -10,7 +10,7 @@
     "debug": "env DEBUG='puppeteer:*' node server.js",
     "build": "./build.sh",
     "restart": "docker kill puppeteer-chrome; yarn build && yarn serve",
-    "serve": "docker run --rm -d -p 8080:8080 --cap-add=SYS_ADMIN --name puppeteer-chrome puppeteer-chrome-linux yarn start"
+    "serve": "docker run --rm -d --add-host localhost.dk:`ip route show | grep docker0 | grep src | awk '{print $9}'` -p 8088:8080 --cap-add=SYS_ADMIN --name puppeteer-accuranker puppeteer-accuranker yarn start"
   },
   "dependencies": {
     "express": "^4.16.2",

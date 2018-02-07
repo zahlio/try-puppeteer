@@ -1,6 +1,6 @@
 FROM node:8-slim
 
-MAINTAINER Eric Bidelman <ebidel@>
+MAINTAINER Christoffer Mikkelsen <cm@accuranker.com>
 
 # Run this like so:
 # docker run -i --rm --cap-add=SYS_ADMIN \
